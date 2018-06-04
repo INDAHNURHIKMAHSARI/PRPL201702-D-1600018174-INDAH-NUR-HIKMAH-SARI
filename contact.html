@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+  <title>RESERVASI</title>
+	<link rel="stylesheet" type="text/css" href="profil.css">
+</head>
+<body>
+<div id="container">
+    <div id="header">
+    	<div class="header"></div>
+    	<div class="menu">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="galeri.html">GALERI</font></a></li>
+				<li><a href="contact.html">RESERVASI</font></a></li>
+				<li><a href="kamar.html">KAMAR</font></a></li>
+				<li><a href="pegawai.html">PEGAWAI</font></a></li>
+				<li><a href="data.php">DATA RESERVASI</font></a></li>
+				<div class="isi">
+			</ul>
+		</div>
+    </div>
+    <div id="content">
+    <div class="kontak">
+<form method="post" action="simpan_customer.php">
+<table cellpadding="10" cellspacing="10">
+	<tbody>
+	<tr>
+			<td><font size="5" color="white">No.Identitas</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="text" name="idcustomer" id="idcustomer" pattern="[0-9]+" required oninvalid="this.setCustomValidity('Masukkan Dengan Angka')"></td>
+		</tr>
+		<tr>
+			<td><font size="5" color="white">Nama Lengkap</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="text" name="namacustomer" id="namacustomer" pattern="[A-Za-z]+" required oninvalid="this.setCustomValidity('Masukkan Dengan Huruf')"></td>
+		</tr>
+		<tr>
+			<td><font size="5" color="white">No.Handphone</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="text" name="hpcustomer" id="hpcustomer" pattern="[0-9]+" required oninvalid="this.setCustomValidity('Masukkan Dengan Angka')"></td>
+		</tr>
+		<tr>
+			<td><font size="5" color="white">Jenis Kelamin</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="radio" name="jkcustomer" value="Laki-Laki"><font color="white">Laki-Laki </font>
+			<input type="radio" name="jkcustomer" value="Perempuan"><font color="white">Perempuan </font></td>
+		</tr>
+		<tr>
+			<td><font size="5" color="white">Email</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="text" name="emailcustomer" id="emailcustomer" pattern="([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z)+" required oninvalid="this.setCustomValidity('Masukkan Huruf dan Angka Dengan Karakter @')"></td>
+		</tr>
+		<tr>
+			<td><font size="5" color="white">Alamat</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><textarea name="alamatcustomer" id="alamatcustomer" cols="40" rows="5"></textarea></td>
+		</tr>
+			<td colspan="3">
+			<center>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
+			</center>
+				</td>
+	</tbody>
+	</table>
+</form>
+</div>
+	<div id="footer">
+		 <font face="Courier" color="Aqua" size="5" >&copy;Indah Hotel Permata</font>
+    </div>
+</div>
+</body>
+</html>

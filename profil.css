@@ -1,0 +1,161 @@
+html,body{
+	height: 100%;
+	background-image: url(latar.jpg);
+	background-size: 100%;
+}
+*{margin:0px auto;}
+#container{
+    min-height:100%;
+    position:relative;
+}
+#header{
+    height: 38px;
+    background:transparent;
+    padding:10px;
+}
+#content{
+    padding:10px;
+    padding-bottom:60px;
+}
+#footer{
+    height:50px;
+    line-height:50px;
+    background:transparent;
+    color:black;
+ 	text-align: right;
+    position:absolute;
+    bottom:0px;
+    width:98%;
+}
+.menu{
+	top: 0;
+	margin-top: 2%;
+	margin-right: 28%;
+	position: absolute;
+	font-family: "Courier";
+	font-weight: bold;
+}
+
+.menu ul li{
+	float: left;
+	list-style: none;
+	text-align: center;
+}
+.menu a:link, a:visited{
+	background-color: transparent;
+	color: pink;
+	padding: 14px 25px;
+	text-decoration: none;
+	display: inline-block;;
+}
+.menu a:hover{
+	background-color: lightcoral;
+	color: black;
+}
+.jarakg{
+	margin-top: 5%;
+}
+.isi{
+	margin-top: 2%;
+	width: 44%;
+	float: center;
+
+}
+.isig{
+	margin-top: 2%;
+	width: 50%;
+	margin-left: 24%;
+	float: left;
+	height: 100%;
+}
+.logo{
+	margin-top: -3%;
+	margin-left: 3%;
+	position: absolute;
+}
+.welcome{
+	text-align: center;
+	margin-top: 7%;
+	font-family: "Courier";
+	font-weight: bold;
+	font-size: 100px;
+}
+.kontak{
+	border: 1px solid aqua;
+	height:500px;
+	width:650px;
+	margin-top: 5%;
+	margin-left: 26%;
+	
+}
+.reservasi{
+    border: 0px solid black;
+    height: 600px;
+    width: 650px;
+    font-color:white;
+    margin-top: 5%;
+    margin-left: 26%;
+}
+.slider{
+    width: 300px;
+    height: 400px;
+    background-color: transparent;
+    border: 1px solid gold;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+.slider figure div{
+    width: 300px;
+    height: 400px;
+    float: left;
+}
+.slider figure img{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slidy infinite;
+}
+@keyframes slidy{
+    0%{
+        left: 0%;
+    }10%{
+        left: 0%;
+    }12%{
+        left: -100%;
+    }22%{
+        left: -200%;
+    }24%{
+        left: -200%;
+    }34%{
+        left: -200%;
+    }36%{
+        left: -300%;
+    }46%{
+        left: -300%;
+    }48%{
+        left: -400%;
+    }58%{
+        left: -400%;
+    }60%{
+        left: -300%;
+    }70%{
+        left: -300%;
+    }72%{
+        left: -200%;
+    }82%{
+        left: -200%;
+    }84%{
+        left: -100%;
+    }94%{
+        left: -100%;
+    }96%{
+        left: 0%;
+    }
+}

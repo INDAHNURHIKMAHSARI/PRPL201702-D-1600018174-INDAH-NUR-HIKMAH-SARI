@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RESERVASI</title>
+	<link rel="stylesheet" type="text/css" href="profil.css">
+  <title>jQuery UI Datepicker - Select a Date Range</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var dateFormat = "mm/dd/yy",
+      from = $( "#from" )
+        .datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 1
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 1
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+  } );
+ </script>
+</head>
+<body>
+ <script language="javascript">
+    <!--
+      function hitungtotal()
+        {
+          var jeniskamar = (document.fform.jeniskamar.value);
+          var ht = 0.0;
+             if(jeniskamar == "Standart")
+              {
+                ht = 230000;
+              }
+            else if(jeniskamar == "Deluxe")
+              {
+                ht = 350000;
+              }
+            else
+              {
+                ht = 550000;
+              }
+            document.fform.hargakamar.value = eval(ht);
+            //gunakan untuk mengecek!!! alert(total);
+        }
+        //-->
+ </script>
+<div id="container">
+    <div id="header">
+    	<div class="header"></div>
+    	<div class="menu">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+        <li><a href="galeri.html">GALERI</font></a></li>
+        <li><a href="contact.html">RESERVASI</font></a></li>
+        <li><a href="kamar.html">KAMAR</font></a></li>
+        <li><a href="pegawai.html">PEGAWAI</font></a></li>
+        <li><a href="data.php">DATA RESERVASI</font></a></li>
+				<div class="isi">
+			</ul>
+		</div>
+    </div>
+    <font size="3">
+      <form action="simpan_kamar.php" method="POST" name="fform" onchange="hitungtotal()">
+    <div id="content">
+    <div class="kontak">
+<table cellpadding="10" cellspacing="10">
+	<tbody>
+	<tr>
+			<td><font size="5" color="white">No.Kamar</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<div class="form-group">
+			<td><input type="text" name="idkamar" id="idkamar" pattern="[0-9]+" required oninvalid="this.setCustomValidity('Masukkan Dengan Angka')"></td>
+		</tr>
+			</div>
+		<tr>
+			<div class="form-group">
+			<td><font size="5" color="white">Jenis Kamar</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="radio" name="jeniskamar" value="Standart"><font color="white">Standart </font>
+			<input type="radio" name="jeniskamar" value="Deluxe"><font color="white">Deluxe </font>
+			<input type="radio" name="jeniskamar" value="Executive"><font color="white">Executive </font></td>
+			</div>
+		</tr>
+      </tr>
+		<tr>
+			<div class="form-group">
+			<td><font size="5" color="white">Check In</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="text" name="check_in" placeholder="Masukkan tanggal" id="from"></td>
+			</div>
+		</tr>
+		<tr>
+			<div class="form-group">
+			<td><font size="5" color="white">Check Out</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="text" name="check_out" placeholder="Masukkan tanggal" id="to"></td>
+			</div>
+		</tr>
+		<tr>
+			<div class="form-group">
+			<td><font size="5" color="white">Jumlah Kamar</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="text" name="jumlahkamar" id="jumlahkamar"></td>
+			</div>
+		</tr>
+		<tr>
+			<div class="form-group">
+			<td><font size="5" color="white">Harga Kamar</font></td>
+			<td><font size="5" color="white"> : </font></td>
+			<td><input type="text" name="hargakamar" id="hargakamar"></td>
+			</div>
+		</tr>
+			<td colspan="3">
+			<center>
+				<input type="submit" value="Submit">
+				<input type="reset" value="Reset">
+			</center>
+				</td>
+	</tbody>
+	</table>
+</form>
+</div>
+	<div id="footer">
+		 <font face="Courier" color="Aqua" size="5" >&copy;Indah Hotel Permata</font>
+    </div>
+</div>
+</body>
+</html>
